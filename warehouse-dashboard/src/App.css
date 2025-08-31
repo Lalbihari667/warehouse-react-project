@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+/* Base card style used by many components to match the new design */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 1px solid #DAE1E7;
+  padding: 20px;
+}

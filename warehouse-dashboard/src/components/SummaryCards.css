@@ -1,0 +1,12 @@
+.summary-grid { display: grid; grid-template-columns: 1fr 1fr 2fr 2fr; gap: 20px; }
+.card-title { font-size: 0.85em; color: #718096; display: block; margin-bottom: 8px; text-align: left; }
+.summary-card, .alerts-list, .history-card { text-align: left; }
+.compliance-value { font-size: 2em; font-weight: 600; color: #38A169; }
+.alerts-value { font-size: 2em; font-weight: 600; color: #DD6B20; }
+.compliance-sparkline { margin-top: 8px; }
+.alerts-list ul { margin: 0; padding: 0; list-style: none; }
+.alerts-list li { padding: 6px 0; font-size: 0.9em; border-bottom: 1px solid #F1F3F5; color: #4A5568; }
+.alerts-list li:last-child { border-bottom: none; }
+.alerts-list li::before { content: "•"; margin-right: 8px; }
+.alerts-list li.warning { color: #DD6B20; }
+.alerts-list li.danger { color: #C53030; }

@@ -1,0 +1,7 @@
+.zone-card { padding: 16px; }
+.zone-card h4 { margin-top: 0; margin-bottom: 16px; font-size: 1em; color: #4A5568; text-align: left; }
+.meters-container { display: flex; justify-content: space-around; align-items: center; gap: 16px; }
+.meter { width: 90px; text-align: center; }
+.meter .CircularProgressbar-text { font-size: 22px !important; font-weight: 600; fill: #2D3748 !important; }
+.meter-label { margin-top: 8px; display: block; font-size: 0.8em; color: #718096; font-weight: 500; }
+.meter-range { font-size: 0.75em; color: #A0AEC0; }

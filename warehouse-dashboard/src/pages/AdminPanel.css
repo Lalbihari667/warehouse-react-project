@@ -1,0 +1,9 @@
+.admin-container { max-width: 1200px; margin: 20px auto; padding: 20px; }
+.admin-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid #dee2e6; margin-bottom: 30px; }
+.admin-header h1 { margin: 0; }
+.admin-header button { background-color: #6c757d; color: white; border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; }
+.users-list-card { background-color: #ffffff; padding: 24px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); }
+.users-table { width: 100%; border-collapse: collapse; text-align: left; }
+.users-table th, .users-table td { padding: 12px 15px; border-bottom: 1px solid #f1f3f5; }
+.users-table thead { background-color: #f8f9fa; }
+.users-table tbody tr:last-child td { border-bottom: none; }

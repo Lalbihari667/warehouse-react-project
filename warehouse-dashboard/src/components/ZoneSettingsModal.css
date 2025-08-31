@@ -1,0 +1,21 @@
+.overlay { position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.7); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+.modal { background: #2D3748; border-radius: 16px; outline: none; width: 90%; max-width: 360px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); color: white; }
+.modal-content { padding: 8px; }
+.zone-list-container { border-radius: 12px; overflow: hidden; }
+.zone-list-item { display: block; width: 100%; padding: 18px; border: none; background-color: transparent; text-align: center; font-size: 1.1em; cursor: pointer; color: #E2E8F0; border-bottom: 1px solid #4A5568; transition: background-color 0.2s; }
+.zone-list-container .zone-list-item:last-child { border-bottom: none; }
+.zone-list-item:hover { background-color: #4A5568; }
+.settings-view { padding: 24px; text-align: left; position: relative; }
+.settings-view h3 { margin: 0 0 24px 0; font-size: 1.5em; }
+.back-button { position: absolute; top: 16px; left: 16px; background: none; border: none; color: white; font-size: 1.5em; cursor: pointer; }
+.setting-display { display: flex; justify-content: space-between; align-items: center; background-color: #4A5568; padding: 12px; border-radius: 8px; margin-bottom: 12px; }
+.setting-display span { font-size: 0.9em; color: #A0AEC0; }
+.slider-group { margin: 32px 0; }
+.slider-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+.slider-group input[type="range"] { width: 100%; -webkit-appearance: none; height: 8px; background: #4A5568; border-radius: 4px; outline: none; }
+.slider-group input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 20px; height: 20px; background: #4299E1; border-radius: 50%; cursor: pointer; border: 2px solid white; }
+.slider-value { display: block; text-align: center; margin-top: 8px; color: #A0AEC0; }
+.modal-actions { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; }
+.modal-actions button { flex: 1; padding: 12px 20px; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; font-size: 1em; }
+.cancel-btn { background-color: #E2E8F0; color: #2D3748; }
+.save-btn { background-color: #4299E1; color: white; }

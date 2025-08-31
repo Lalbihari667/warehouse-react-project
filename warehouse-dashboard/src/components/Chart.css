@@ -1,0 +1,4 @@
+.trends-chart-container h4 { margin-top: 0; margin-bottom: 20px; color: #2D3748; text-align: left; }
+.chart-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.chart-controls { display: flex; gap: 10px; }
+.chart-controls select, .chart-controls input { padding: 6px 10px; border-radius: 6px; border: 1px solid #CBD5E0; font-size: 0.9em; }

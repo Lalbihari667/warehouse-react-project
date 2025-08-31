@@ -1,0 +1,27 @@
+.report-page-background { background-color: #E9EEF2; min-height: 100vh; }
+.report-page-header { background-color: #FFFFFF; display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+.report-page-header h2 { font-size: 1.2em; margin: 0; color: #2D3748; }
+.return-btn { background-color: #2D3748; color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-weight: 500; }
+.report-page-container { max-width: 850px; margin: 32px auto; }
+.report-content { background-color: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.report-main-header { text-align: left; margin-bottom: 32px; border-bottom: 1px solid #E2E8F0; padding-bottom: 16px; }
+.report-main-header h1 { margin: 0 0 8px 0; color: #2D3748; font-size: 1.8em; }
+.report-main-header p { margin: 4px 0; color: #4A5568; font-size: 0.9em; }
+.report-section { margin-bottom: 32px; }
+.report-section h3 { margin-bottom: 16px; color: #2D3748; font-size: 1.2em; border-bottom: 1px solid #E2E8F0; padding-bottom: 8px; }
+.report-section ul { padding-left: 20px; line-height: 1.8; color: #4A5568; }
+.highlight-green { color: #38A169; font-weight: 600; }
+.zone-compliance-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.zone-compliance-card { border: 1px solid #E2E8F0; border-radius: 8px; padding: 16px; background-color: #F7FAFC; }
+.zone-compliance-card h4 { margin-top: 0; margin-bottom: 12px; color: #2D3748; }
+.zone-compliance-card p { margin: 4px 0; font-size: 0.9em; color: #4A5568; }
+.zone-compliance-card .range { color: #718096; font-size: 0.85em; }
+.violations-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.9em; }
+.violations-table th, .violations-table td { padding: 12px; border-bottom: 1px solid #E2E8F0; }
+.violations-table thead { background-color: #F7FAFC; color: #4A5568; }
+.violations-table td { color: #2D3748; }
+.severity-high { background-color: #FED7D7; color: #C53030; padding: 4px 8px; border-radius: 12px; font-weight: 600; }
+.severity-moderate { background-color: #FEEBC8; color: #DD6B20; padding: 4px 8px; border-radius: 12px; font-weight: 600; }
+.report-footer { margin-top: 32px; padding-top: 16px; border-top: 1px solid #E2E8F0; font-size: 0.75em; color: #718096; }
+.download-btn-container { text-align: center; margin-top: 32px; }
+.download-pdf-btn { background-color: #4299E1; color: white; border: none; padding: 12px 24px; font-size: 1em; border-radius: 8px; cursor: pointer; font-weight: 600; }
