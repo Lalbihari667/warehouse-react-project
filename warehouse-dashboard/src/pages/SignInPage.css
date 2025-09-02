@@ -7,8 +7,16 @@
 .input-group label { display: block; margin-bottom: 8px; font-weight: 500; font-size: 0.85em; color: #4A5568; }
 .input-with-icon { position: relative; }
 .input-icon { position: absolute; top: 50%; left: 14px; transform: translateY(-50%); color: #A0AEC0; }
-.input-with-icon input { width: 100%; padding: 10px 10px 10px 40px; border: 1px solid #CBD5E0; border-radius: 8px; box-sizing: border-box; background-color: #ffffff; font-size: 1em; }
+.input-with-icon input { width: 100%; padding: 10px 40px 10px 40px; border: 1px solid #CBD5E0; border-radius: 8px; box-sizing: border-box; background-color: #ffffff; font-size: 1em; }
 .input-with-icon input:focus { outline: none; border-color: #4299E1; box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2); }
+.password-toggle-icon {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    color: #A0AEC0;
+    cursor: pointer;
+}
 .options-container { text-align: right; margin-top: -12px; margin-bottom: 20px; }
 .forgot-password { font-size: 0.8em; color: #4299E1; text-decoration: none; }
 .error-message { color: #C53030; background-color: #FED7D7; border: 1px solid #FBB6B6; border-radius: 8px; padding: 10px; text-align: center; margin-bottom: 16px; font-size: 0.9em; }

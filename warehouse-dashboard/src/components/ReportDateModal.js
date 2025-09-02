@@ -8,7 +8,8 @@ import './ReportDateModal.css';
 
 Modal.setAppElement('#root');
 
-const ReportDateModal = ({ isOpen, onRequestClose }) => {
+// Accept the warehouseData prop
+const ReportDateModal = ({ isOpen, onRequestClose, warehouseData }) => {
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const navigate = useNavigate();
@@ -22,7 +23,8 @@ const ReportDateModal = ({ isOpen, onRequestClose }) => {
     const formattedStartDate = startDate.toISOString().split('T')[0];
     const formattedEndDate = endDate.toISOString().split('T')[0];
 
-    navigate(`/report?start=${formattedStartDate}&end=${formattedEndDate}`);
+    // Use the 'state' option to pass the warehouseData to the new route
+    navigate(`/report?start=${formattedStartDate}&end=${formattedEndDate}`, { state: { warehouseData } });
     onRequestClose();
   };
 

@@ -22,7 +22,7 @@ const initialWarehouseData = {
 function App() {
   const [warehouseData, setWarehouseData] = useState(initialWarehouseData);
   const [currentUser, setCurrentUser] = useState(null);
-  const [maintenanceDate, setMaintenanceDate] = useState(null); // State for maintenance date
+  const [maintenanceDate, setMaintenanceDate] = useState(null);
 
   const handleUpdateZone = (zoneName, newValues) => {
     const updatedZones = warehouseData.zones.map(zone => {
@@ -36,6 +36,21 @@ function App() {
       return zone;
     });
     setWarehouseData({ ...warehouseData, zones: updatedZones });
+  };
+
+  const handleAddNewZone = (newZone) => {
+    setWarehouseData(prevState => ({
+      ...prevState,
+      zones: [...prevState.zones, newZone]
+    }));
+  };
+
+  // Add this new function to handle deleting a zone
+  const handleDeleteZone = (zoneNameToDelete) => {
+    setWarehouseData(prevState => ({
+      ...prevState,
+      zones: prevState.zones.filter(zone => zone.name !== zoneNameToDelete)
+    }));
   };
 
   const handleLoginSuccess = (user) => {
@@ -61,7 +76,9 @@ function App() {
               currentUser ? (
                 <Dashboard 
                   warehouseData={warehouseData} 
-                  onUpdateZone={handleUpdateZone} 
+                  onUpdateZone={handleUpdateZone}
+                  onAddNewZone={handleAddNewZone}
+                  onDeleteZone={handleDeleteZone} // Pass the delete function
                   currentUser={currentUser}
                   maintenanceDate={maintenanceDate}
                   onSetMaintenanceDate={handleSetMaintenanceDate}

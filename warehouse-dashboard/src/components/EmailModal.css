@@ -1,0 +1,83 @@
+/* Styling for EmailModal, consistent with other modals */
+.email-modal {
+  background: #FFFFFF;
+  border-radius: 16px;
+  outline: none;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: #2D3748;
+  padding: 24px;
+}
+
+.email-modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 1.4em;
+  font-weight: 600;
+  color: #2D3748;
+  text-align: left;
+}
+
+.email-input-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.email-input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+  color: #4A5568;
+  font-weight: 500;
+}
+
+.email-input-group input,
+.email-input-group textarea {
+  width: 100%;
+  background-color: #F7FAFC;
+  color: #2D3748;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 1em;
+  font-family: inherit;
+}
+
+.email-input-group input:focus,
+.email-input-group textarea:focus {
+  outline: none;
+  border-color: #4299E1;
+  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.2);
+}
+
+.email-input-group textarea {
+  resize: vertical;
+}
+
+.email-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.email-modal-actions button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.email-cancel-btn {
+  background-color: #E2E8F0;
+  color: #4A5568;
+}
+
+.email-send-btn {
+  background-color: #4299E1;
+  color: white;
+}

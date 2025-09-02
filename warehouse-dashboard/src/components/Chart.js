@@ -9,12 +9,20 @@ const data = [
   { time: '2pm', Temp: 26, Humidity: 45 }, { time: '3pm', Temp: 25, Humidity: 46 },
 ];
 
-const TempHumidityChart = () => (
+// Accept the 'zones' prop, defaulting to an empty array to prevent errors.
+const TempHumidityChart = ({ zones = [] }) => (
   <div className="trends-chart-container">
     <div className="chart-header">
       <h4>Temperature and Humidity Trends</h4>
       <div className="chart-controls">
-        <select><option value="zone1">Zone 1</option></select>
+        {/* Replace the static select with a dynamic one */}
+        <select>
+          {zones.map(zone => (
+            <option key={zone.name} value={zone.name.toLowerCase().replace(' ', '')}>
+              {zone.name}
+            </option>
+          ))}
+        </select>
         <input type="date" />
       </div>
     </div>

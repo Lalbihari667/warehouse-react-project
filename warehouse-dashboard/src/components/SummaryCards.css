@@ -4,6 +4,37 @@
 .compliance-value { font-size: 2em; font-weight: 600; color: #38A169; }
 .alerts-value { font-size: 2em; font-weight: 600; color: #DD6B20; }
 .compliance-sparkline { margin-top: 8px; }
+
+/* New and modified styles for Alerts card */
+.alerts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.alerts-header .card-title {
+  margin-bottom: 0;
+}
+.alert-icon-btn {
+  background: #F7FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #718096;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+.alert-icon-btn:hover {
+  background-color: #E2E8F0;
+  color: #2D3748;
+}
+/* End of new styles */
+
 .alerts-list ul { margin: 0; padding: 0; list-style: none; }
 .alerts-list li { padding: 6px 0; font-size: 0.9em; border-bottom: 1px solid #F1F3F5; color: #4A5568; }
 .alerts-list li:last-child { border-bottom: none; }

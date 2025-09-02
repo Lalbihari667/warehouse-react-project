@@ -1,0 +1,93 @@
+.add-user-modal {
+  background: #FFFFFF;
+  border-radius: 16px;
+  outline: none;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: #2D3748;
+  padding: 24px;
+}
+
+.add-user-modal-content h3 {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 1.4em;
+  font-weight: 600;
+}
+
+.add-user-modal .form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.add-user-modal .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.9em;
+  color: #4A5568;
+  font-weight: 500;
+}
+
+.add-user-modal .form-group input {
+  width: 100%;
+  background-color: #F7FAFC;
+  color: #2D3748;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+/* --- NEW STYLES START HERE --- */
+
+/* This container allows us to position the icon inside the input field */
+.password-input-container {
+  position: relative;
+}
+
+/* Adjust the padding on the password input specifically to avoid text overlapping the icon */
+.password-input-container input {
+  padding-right: 40px; /* Make space for the icon */
+}
+
+/* Styles for the eye icon */
+.password-toggle-icon {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  color: #A0AEC0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* --- NEW STYLES END HERE --- */
+
+.add-user-modal .modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.add-user-modal .modal-actions button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.add-user-modal .cancel-btn {
+  background-color: #E2E8F0;
+  color: #4A5568;
+}
+
+.add-user-modal .save-btn {
+  background-color: #38A169;
+  color: white;
+}

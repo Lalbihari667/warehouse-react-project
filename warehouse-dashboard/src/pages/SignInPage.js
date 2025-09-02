@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { FaUserAlt, FaLock } from 'react-icons/fa';
+import { FaUserAlt, FaLock, FaEye, FaEyeSlash } from 'react-icons/fa';
 import './SignInPage.css';
 import { validateUser } from '../auth/users';
 
@@ -8,6 +8,7 @@ const SignInPage = ({ onLoginSuccess }) => {
   const [employeeId, setEmployeeId] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleSignIn = (e) => {
@@ -49,12 +50,15 @@ const SignInPage = ({ onLoginSuccess }) => {
               <div className="input-with-icon">
                 <FaLock className="input-icon" />
                 <input
-                  type="password"
+                  type={showPassword ? 'text' : 'password'}
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   required
                 />
+                <span className="password-toggle-icon" onClick={() => setShowPassword(!showPassword)}>
+                  {showPassword ? <FaEyeSlash /> : <FaEye />}
+                </span>
               </div>
             </div>
             <div className="options-container">

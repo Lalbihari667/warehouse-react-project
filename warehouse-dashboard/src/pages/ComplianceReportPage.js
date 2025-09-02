@@ -1,16 +1,15 @@
 // src/pages/ComplianceReportPage.js
 import React, { useRef } from 'react';
-import { useNavigate, useSearchParams } from 'react-router-dom';
+// Import useLocation to access navigation state
+import { useNavigate, useSearchParams, useLocation } from 'react-router-dom';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import './ComplianceReportPage.css';
 
-// Helper function to format date strings nicely
 const formatDate = (dateString) => {
   if (!dateString) return '';
   const options = { year: 'numeric', month: 'long', day: 'numeric' };
   const date = new Date(dateString);
-  // Add a day to the date to correct for potential timezone issues with toISOString()
   date.setDate(date.getDate() + 1);
   return date.toLocaleDateString('en-US', options);
 };
@@ -19,15 +18,20 @@ const ComplianceReportPage = () => {
   const navigate = useNavigate();
   const reportRef = useRef();
   const [searchParams] = useSearchParams();
+  
+  // Get the location object which contains the state
+  const location = useLocation();
+  
+  // Extract warehouseData from the state, with a fallback
+  const warehouseData = location.state?.warehouseData || { zones: [] };
+  const zones = warehouseData.zones;
 
-  // Get the dates from the URL
   const startDate = searchParams.get('start');
   const endDate = searchParams.get('end');
 
-  // Create the period string dynamically
   const periodString = (startDate && endDate)
     ? `Period: ${formatDate(startDate)} - ${formatDate(endDate)}`
-    : 'Period: Data Not Specified'; // Fallback if no dates are in URL
+    : 'Period: Data Not Specified';
 
   const handleDownloadPdf = () => {
     const input = reportRef.current;
@@ -68,10 +72,18 @@ const ComplianceReportPage = () => {
           
           <section className="report-section">
             <h3>Zone-wise Compliance</h3>
-            <div className="zone-compliance-grid">
-              <div className="zone-compliance-card"><h4>Zone 1</h4><p>Avg Temp: 2°C <span className="range">(Range: 1–4°C)</span></p><p>Avg Humidity: 12% <span className="range">(Range: 8–18%)</span></p><p>Compliance: 98%</p><p>Alerts: 1</p></div>
-              <div className="zone-compliance-card"><h4>Zone 2</h4><p>Avg Temp: 6°C <span className="range">(Range: 3–10°C)</span></p><p>Avg Humidity: 40% <span className="range">(Range: 30–55%)</span></p><p>Compliance: 92%</p><p>Alerts: 2</p></div>
-              <div className="zone-compliance-card"><h4>Zone 3</h4><p>Avg Temp: 10°C <span className="range">(Range: 8–15°C)</span></p><p>Avg Humidity: 50% <span className="range">(Range: 45–60%)</span></p><p>Compliance: 90%</p><p>Alerts: 2</p></div>
+            {/* Dynamically adjust grid columns */}
+            <div className="zone-compliance-grid" style={{ gridTemplateColumns: `repeat(${Math.min(zones.length, 3)}, 1fr)` }}>
+              {/* Map over the real zones data */}
+              {zones.map(zone => (
+                <div key={zone.name} className="zone-compliance-card">
+                  <h4>{zone.name}</h4>
+                  <p>Avg Temp: {zone.temperature.value}°C <span className="range">(Range: {zone.temperature.range.join('–')}°C)</span></p>
+                  <p>Avg Humidity: {zone.humidity.value}% <span className="range">(Range: {zone.humidity.range.join('–')}%)</span></p>
+                  <p>Compliance: 98%</p> {/* Note: This is still mock data */}
+                  <p>Alerts: 1</p> {/* Note: This is still mock data */}
+                </div>
+              ))}
             </div>
           </section>
           
